@@ -4,3 +4,4 @@ npm install nodemon
 npm install express-session
 npm install bcrypt
 npm run dev
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
