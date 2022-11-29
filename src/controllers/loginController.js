@@ -50,8 +50,7 @@ function storeUser(req,res){
             }else{
                 bcrypt.hash(data.empContraseña,12).then(hash =>{
                     data.empContraseña = hash;        
-                    req.getConnection((err,conn) =>{
-                        console.log(data);
+                    req.getConnection((err,conn) =>{                        
                         conn.query('Insert into empleado set?',[data],(err,rows)=>{
                             req.session.loggedin = true;
                             req.session.empNombre = data.empNombre;
