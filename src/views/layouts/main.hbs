@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Node.js MySql</title>
+
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+
+    <!-- Fontawesome Link -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,#f1f4f9,#dff1ff);
+}
+section .color{
+    position: absolute;
+    filter: blur(400px);
+}
+section .color:nth-child(1){
+    top: -10%;
+    width: 90%;
+    height: 80%;
+    background: #194fff;
+}
+section .color:nth-child(2){
+    bottom: -50px;
+    left: 100px;
+    width: 95%;
+    height: 500px;
+    background: #73f021;
+}
+section .color:nth-child(3){
+    bottom: 300px;
+    right: 40%;
+    width: 40%;
+    height: 520px;
+    background: #1c2701;
+}
+    </style>
+
+  </head>
+  <body>
+    <nav class="flex py-5 bg-green-500 text-white px-24">
+      <div class="w-1/2 px-12 mr-auto">
+        <h1 class="text-2xl font-bold">Payroll</h1>
+      </div>
+  
+
+
+
+      <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+        {{#if empNombre}}  
+        <p>{{empNombre}}</p>
+
+        <li class="nav-item px-4">
+          <a href="/logout" class="nav-link font-semibold bg-red-500 hover:bg-red-700 py-3 px-4 rounded-md">Logout</a>
+        </li>
+
+        {{else}}
+        <li class="nav-item px-4">
+          <a href="/login" class="nav-link font-semibold hover:bg-green-700 py-3 px-4 rounded-md">Login</a>
+        </li>
+
+        <li class="nav-item px-4">
+          <a href="/register" class="nav-link font-semibold border-2 border-white hover:bg-white hover:text-green-700 py-3
+            px-4 rounded-md">Register</a>
+        </li>
+        {{/if}}
+      </ul>
+    </nav>
+    <section>
+    {{{body}}}
+    </section>
+
+  </body>
+</html>
