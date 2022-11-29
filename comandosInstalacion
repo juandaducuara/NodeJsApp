@@ -1,0 +1,6 @@
+npm init --yes
+npm install express mysql express-handlebars express-myconnection express session body-parser
+npm install nodemon
+npm install express-session
+npm install bcrypt
+npm run dev
